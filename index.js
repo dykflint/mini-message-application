@@ -40,7 +40,7 @@ app.post('/new', express.json(), (req, res) => {
   const { messageUser, message } = req.body;
   messages.push({ text: message, user: messageUser, added: new Date() });
   res.redirect('/');
-  res.send('Message processed');
+  // res.send('Message processed');
 });
 
 app.listen(PORT, '0.0.0.0', () => {
