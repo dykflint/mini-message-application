@@ -9,7 +9,7 @@
   <ul>
     <% for(let i = 0; i < messages.length; i++) { %>
       <li>New message received at <% console.log(messages[i].text)%>
-        <%= messages[i].added%>:<%= messages[i].text %> by <%= messages[i].user%> <a href="/messages/<%= i%>"> Show Message</a></li>
+        <%= messages[i].added%>:<%= messages[i].text %> by <%= messages[i].username%> <a href="/messages/<%= i%>"> Show Message</a></li>
     <%};%>
   </ul>
 </body>
