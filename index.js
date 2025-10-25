@@ -1,5 +1,5 @@
 import express from 'express';
-import usersRouter from './routes/usersRouter.js';
+import messagesRouter from './routes/messagesRouter.js';
 const app = express();
 
 const messages = [
@@ -21,7 +21,7 @@ const messages = [
 app.use(express.urlencoded({ extended: true }));
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
-app.use('/', usersRouter);
+app.use('/', messagesRouter);
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, error => {
   if (error) {
