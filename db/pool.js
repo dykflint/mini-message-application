@@ -13,8 +13,7 @@ import { Pool } from 'pg';
 //   port: 5432, // The default port
 // });
 export default new Pool({
-  connectionString:
-    'postgresql://postgres:yPcGBVMHmjAOAgcPGKTinEMjtkWEPrja@yamanote.proxy.rlwy.net:16948/railway',
+  connectionString: process.env.DATABASE_URL,
   ssl: {
     rejectUnauthorized: false, // Required for Railway
   },
